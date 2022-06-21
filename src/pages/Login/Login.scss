@@ -1,0 +1,58 @@
+@import '~styles/variables';
+
+.root {
+  color: #5e5c74;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  min-height: 89vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 77px 55px 33px;
+}
+
+.title {
+  display: block;
+  padding-bottom: 40px;
+  font-size: 30px;
+  font-family: 'Arial Black';
+  color: #5e5c74;
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+.wrapperRegLink {
+  padding-top: 30px;
+
+  a {
+    color: #717171;
+  }
+}
+
+.wrapperRegLink:hover a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.isInvalid {
+  border-color: #ffb3b3 !important;
+}

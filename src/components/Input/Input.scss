@@ -1,0 +1,52 @@
+.input {
+  width: 100%;
+  height: auto;
+  color: #333;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+.inputTheme {
+  &_default {
+    padding: 5px 5px 5px 20px;
+    background-color: #f1f3f4;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+  }
+
+  &_modal {
+    border: 2px solid #bbb;
+  }
+
+  &_login {
+    height: 50px;
+    line-height: 40px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    border: 1px solid #f1f4f7;
+    background-color: #f1f4f7;
+    border-radius: 5px;
+    color: #5e5c74;
+  }
+
+  &_filter {
+    width: 300px;
+    height: 50px;
+    color: #5e5c74;
+    border-radius: 5px;
+    background: #d9e1e7;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  &_filter::placeholder {
+    color: #8b9cab !important;
+  }
+}
+
+.input::placeholder {
+  color: #c0c0c0;
+}
+

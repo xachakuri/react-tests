@@ -1,0 +1,24 @@
+.container_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 200px auto;
+  text-align: center;
+  background-color: #446bff;
+  border-radius: 12px;
+  width: 800px;
+  height: 250px;
+
+  h2 {
+    margin-bottom: 45px;
+    font-size: 30px;
+    font-family: 'Arial Black';
+  }
+
+  span {
+    font-size: 26px;
+    font-family: 'Arial Black';
+    margin-bottom: 35px;
+  }
+}
