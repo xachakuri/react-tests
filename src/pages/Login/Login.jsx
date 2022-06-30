@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Login.scss';
 import { Input } from 'components/Input';
 import { Button } from 'components/Button';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
@@ -17,19 +17,15 @@ const validationSchema = Yup.object().shape({
 });
 export const Login = () => {
   const dispatch = useDispatch();
-  const { push } = useHistory();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(validationSchema),
   });
   const onSubmit = data => {
     dispatch(userAction.userLogin(data));
-    push('/main');
-    reset();
   };
   return (
     <div className={styles.root}>

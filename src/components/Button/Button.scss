@@ -25,28 +25,45 @@
     color: #f1f4f7;
     background: #555;
   }
-  &_start {
-  width:150px;
-  color: #446bff;
-  background: #fff;
-  transition: 0.3s;
+
+  &_close {
+    width: auto;
+    height: auto;
+    padding: 0;
+    color: #dc3545;
+    font-size: 30px;
+    transition: transform 0.5s;
   }
+
+  &_close:hover {
+    transform: scale(1.4);
+  }
+
+  &_start {
+    width: 150px;
+    color: #446bff;
+    background: #fff;
+    transition: 0.3s;
+  }
+
   &_start:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
   }
 
   &_edit {
-  border: none;
-  background: none;
-  img {
-  height: 50px;
-  width: 50px;
-  display: inline-block;
-  transition: 0.3s;
-  }
-  img:hover {
-  transform: scale(1.2);
-  }
+    border: none;
+    background: none;
+
+    img {
+      height: 50px;
+      width: 50px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
   }
 
   &_filter {

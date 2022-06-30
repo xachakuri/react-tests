@@ -19,6 +19,7 @@ body {
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 15px;
   background-color: #446bff;
@@ -34,5 +35,22 @@ body {
 
   link {
     text-decoration: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  font-size: 18px;
+
+  a {
+    margin-right: 20px;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }

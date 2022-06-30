@@ -2,19 +2,19 @@ import React from 'react';
 import styles from './TestsFilters.scss';
 import { Input } from 'components/Input';
 import { Button } from 'components/Button';
-import { toast } from 'react-toastify';
-
+import * as select from 'models/users/selectors';
+import { useSelector } from 'react-redux';
 
 export const TestsFilters = () => {
-  const notify = () => toast("Wow so easy!");
+  const isAdmin = useSelector(select.isAdmin);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.sort}>
           <Input type="text" placeholder="Поиск тестов" theme="filter" />
-          <Button theme="filter" onClick={notify}>Сортировка</Button>
+          <Button theme="filter"> Сортировка </Button>
         </div>
-        <Button theme="filter">Добавить новый тест</Button>
+        {isAdmin && <Button theme="filter">Добавить новый тест</Button>}
       </div>
     </div>
   );

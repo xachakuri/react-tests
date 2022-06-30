@@ -10,7 +10,6 @@ import { useForm } from 'react-hook-form';
 import { FormField } from 'components/FormField/FormField';
 import { useDispatch } from 'react-redux';
 import { actions as userAction } from 'models/users/slice';
-import { useHistory } from 'react-router-dom';
 
 const validationSchema = Yup.object().shape({
   username: Yup.string()
@@ -26,19 +25,15 @@ const validationSchema = Yup.object().shape({
 });
 export const Registration = () => {
   const dispatch = useDispatch();
-  const { push } = useHistory();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(validationSchema),
   });
   const onSubmit = data => {
     dispatch(userAction.userRegistration(data));
-    push('/signin');
-    reset();
   };
   return (
     <div className={styles.root}>

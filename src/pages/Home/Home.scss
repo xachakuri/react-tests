@@ -1,24 +1,13 @@
-.container_home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 200px auto;
-  text-align: center;
-  background-color: #446bff;
-  border-radius: 12px;
-  width: 800px;
-  height: 250px;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+}
 
-  h2 {
-    margin-bottom: 45px;
-    font-size: 30px;
-    font-family: 'Arial Black';
-  }
-
-  span {
-    font-size: 26px;
-    font-family: 'Arial Black';
-    margin-bottom: 35px;
-  }
+.title {
+  padding-top: 50px;
+  color: #5e5c74;
+  font-family: 'Arial Black';
+  font-weight: 600;
+  font-size: 30px;
 }

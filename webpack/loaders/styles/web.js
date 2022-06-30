@@ -11,7 +11,7 @@ module.exports = [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
         loader: 'css-loader',
-        options: cssLoaderOptions,
+        // options: cssLoaderOptions,
       },
       ...loaders,
     ],

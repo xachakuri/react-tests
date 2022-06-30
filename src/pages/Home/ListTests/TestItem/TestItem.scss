@@ -1,27 +1,30 @@
 .wrapper {
-  display:grid;
+  display: grid;
   grid-template-columns: 76px 400px 50px;
   gap: 5px;
   align-items: center;
-  padding:0 15px;
-  width:570px;
-  text-decoration: none!important;
+  padding: 0 15px;
+  width: 570px;
+  text-decoration: none !important;
   border-radius: 5px;
   background-color: #fff;
   height: 100px;
   transition: all 0.3s;
 }
+
 .wrapper:hover {
   box-shadow: 8px 14px 21px rgba(163, 172, 181, 0.23);
   transform: translateY(-3px);
 }
+
 .logo {
-height:76px;
-  width:76px;
+  height: 76px;
+  width: 76px;
 }
+
 .title {
-font-family: Verdana, sans-serif;
-font-size:20px;
-font-weight: 400;
-color: #5e5d73;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #5e5d73;
 }

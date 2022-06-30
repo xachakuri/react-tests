@@ -1,13 +1,7 @@
-import { createSelector } from 'reselect';
+import { initialState } from './slice';
 
-export const usersSelector = createSelector(
-  state => state,
-  state => state.users
-);
+const selectDomain = state => state.users || initialState;
 
-export const errorSelector = createSelector(
-  usersSelector,
-  ({ hasError }) => hasError
-);
+export const isAuthorized = state => selectDomain(state).isAuthorized;
 
-
+export const isAdmin = state => selectDomain(state).isAdmin;

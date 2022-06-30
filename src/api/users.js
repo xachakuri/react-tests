@@ -1,5 +1,6 @@
 import axios from 'axios';
 import qs from 'qs';
+import { toast } from 'react-toastify';
 
 const mainAxios = axios.create({
   baseURL: 'https://snp.drankov.ru/api/v1',
@@ -12,10 +13,15 @@ const mainAxios = axios.create({
 mainAxios.defaults.paramsSerializer = function(params) {
   return qs.stringify(params, { indices: false }); // param=value1&param=value2
 };
-mainAxios.interceptors.request.use(config => {
-  config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
-  return config;
-});
+
+mainAxios.interceptors.response.use(
+  response => response,
+  error => {
+    toast.error(error.message);
+
+    return Promise.reject(error);
+  }
+);
 
 export const registerUser = ({ username, password, isAdmin }) =>
   mainAxios
@@ -28,7 +34,14 @@ export const registerUser = ({ username, password, isAdmin }) =>
     .then(({ data }) => data);
 
 export const loginUser = ({ username, password }) =>
-  mainAxios.post('/signin', {
-    username,
-    password,
-  });
+  mainAxios
+    .post('/signin', {
+      username,
+      password,
+    })
+    .then(({ data }) => data);
+
+export const logoutUser = () => mainAxios.delete('/logout');
+
+export const currentSession = () =>
+  mainAxios.get('/users/current').then(({ response }) => response);
